@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/SideBar/static/js/main.4ecf03aa.js",
+    "static/js/787.fc440272.chunk.js": "/SideBar/static/js/787.fc440272.chunk.js",
+    "index.html": "/SideBar/index.html",
+    "main.4ecf03aa.js.map": "/SideBar/static/js/main.4ecf03aa.js.map",
+    "787.fc440272.chunk.js.map": "/SideBar/static/js/787.fc440272.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4ecf03aa.js"
+  ]
+}
