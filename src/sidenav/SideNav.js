@@ -12,13 +12,15 @@ import TopButtons from './topbuttons/TopButtons'
 
 // custom
 import BookmarksContext from '../context/BookmarksContext'
+import SettingsContext from '../context/SettingsContext'
 import Folder from './Folder'
-
-const drawerWidth = 240;
 
 function SideNav() {
 
     const bookmarksContext = React.useContext(BookmarksContext)
+    const settings = React.useContext(SettingsContext)
+    const drawerWidth = settings.drawerWidth
+
     return (
         <Drawer
             variant="permanent"

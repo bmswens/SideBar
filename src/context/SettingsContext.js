@@ -9,7 +9,11 @@ import { useLocalStorage } from '@rehooks/local-storage'
 
 const defaultSettings = {
     defaultTarget: "https://aia.mit.edu/",
-    darkMode: true
+    setDefaultTarget: () => {},
+    darkMode: true,
+    setDarkMode: () => {},
+    drawerWidth: 240,
+    setDrawerWidth: () => {}
 }
 const SettingsContext = React.createContext(defaultSettings)
 
@@ -27,13 +31,18 @@ function SettingsContextWrapper(props) {
           }
     })
 
+    // drawer width
+    const [drawerWidth, setDrawerWidth] = useLocalStorage("drawerWidth", 240)
+
     return (
         <SettingsContext.Provider 
             value={{
                 defaultTarget,
                 setDefaultTarget,
                 darkMode,
-                setDarkMode
+                setDarkMode,
+                drawerWidth,
+                setDrawerWidth
             }}
         >
             <ThemeProvider theme={theme}>

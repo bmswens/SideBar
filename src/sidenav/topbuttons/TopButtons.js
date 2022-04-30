@@ -4,13 +4,13 @@ import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 
 // Icons
-import SettingsIcon from '@mui/icons-material/Settings'
 import InfoIcon from '@mui/icons-material/Info'
 
 // custom
 import BackButton from './BackButton'
 import AddNewBookmarkButton from './AddNewBookmarkButton'
 import AddNewFolderButton from './AddNewFolderButton'
+import SettingsButton from './SettingsButton'
 
 function TopButtons() {
 
@@ -25,9 +25,7 @@ function TopButtons() {
             <BackButton />
             <AddNewBookmarkButton />
             <AddNewFolderButton />
-            <IconButton>
-                <SettingsIcon />
-            </IconButton>
+            <SettingsButton />
             <IconButton>
                 <InfoIcon />
             </IconButton>

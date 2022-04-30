@@ -1,6 +1,9 @@
 // React
 import React from 'react'
 
+// custom
+import SettingsContext from './SettingsContext'
+
 const defaultLocation = {
     history: [],
     target: "https://aia.mit.edu/",
@@ -11,7 +14,9 @@ const LocationContext = React.createContext(defaultLocation)
 
 function LocationContextWrapper(props) {
 
-    const [target, setTarget] = React.useState("https://aia.mit.edu/")
+    const settings = React.useContext(SettingsContext)
+
+    const [target, setTarget] = React.useState(settings.defaultTarget)
     const [history, setHistory] = React.useState([])
 
     function back(){
@@ -28,6 +33,10 @@ function LocationContextWrapper(props) {
         setHistory(newHistory)
         setTarget(newTarget)
     }
+
+    React.useEffect(() => {
+        setTarget(settings.defaultTarget)
+    }, [settings.defaultTarget])
 
     return (
         <LocationContext.Provider value={{ history, target, back, navigate}}>
