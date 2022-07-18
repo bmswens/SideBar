@@ -6,6 +6,7 @@ import { useLocalStorage } from '@rehooks/local-storage'
 
 const defaultBookmarks = {
     bookmarks: [],
+    setBookmarks: () => {},
     addBookmark: () => {},
     getFolders: () => {},
     deleteBookmark: () => {},
@@ -85,6 +86,7 @@ function BookmarksContextWrapper(props) {
         <BookmarksContext.Provider
             value={{
                 bookmarks,
+                setBookmarks,
                 addBookmark,
                 getFolders,
                 deleteBookmark

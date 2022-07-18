@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { useLocalStorage } from '@rehooks/local-storage'
 
 const defaultSettings = {
-    defaultTarget: "https://aia.mit.edu/",
+    defaultTarget: "https://bmswens.github.io/",
     setDefaultTarget: () => {},
     darkMode: true,
     setDarkMode: () => {},
